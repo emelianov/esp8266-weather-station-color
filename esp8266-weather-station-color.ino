@@ -166,7 +166,7 @@ void setup() {
   gfx.fillBuffer(MINI_BLACK);
   gfx.commit();
   //gfx.freeBuffer();
-  gfx.drawBmpFromFile(F("/logo24.bmp"), 0,0);
+  gfx.drawBmpFromFile(F("/logo24.bmp"), 0, 0, true);
   //gfx.commit();
   delay(10000);
   connectWifi();
@@ -453,7 +453,7 @@ void drawAstronomy() {
   gfx.setTextAlignment(TEXT_ALIGN_CENTER);
   gfx.setColor(MINI_YELLOW);
   //DEBUG_WS("%s\n", String(reinterpret_cast<const __FlashStringHelper *>(MOON_PHASES[moonData.phase])).c_str());
-  gfx.drawString(120, 250, String(reinterpret_cast<const __FlashStringHelper *>(MOON_PHASES[moonData.phase])));
+  gfx.drawString(120, 250, MOON_PHASES[moonData.phase]);
   
   gfx.setTextAlignment(TEXT_ALIGN_LEFT);
   gfx.setColor(MINI_YELLOW);
